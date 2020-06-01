@@ -9,17 +9,24 @@ package edu.ups.ecu.Modelo;
  *
  * @author Dutan2000
  */
-public class Television {
+public class Television extends Electrodometstico {
     private int resolucion;
     private boolean puertoHDMI;
 
     public Television() {
     }
-    
-    public Television(int codigo){
-        
+
+    public Television(int codigo) {
+        super(codigo);
     }
 
+    public Television(int resolucion, boolean puertoHDMI) {
+        this.resolucion = resolucion;
+        this.puertoHDMI = puertoHDMI;
+    }
+    
+    
+    //getters y setters
     public int getResolucion() {
         return resolucion;
     }
@@ -61,9 +68,21 @@ public class Television {
         return true;
     }
 
+    //overide aumento de precio
+    @Override
+    public double obtenerPrecioFinal() {
+        double incremento=0;
+        if(resolucion<=40 && puertoHDMI==true){
+            incremento= (super.precioBase*.3)+ 50;
+        }
+        return incremento;
+    }
+    
+    
+
     @Override
     public String toString() {
-        return "Television{" + "resolucion=" + resolucion + ", puertoHDMI=" + puertoHDMI + '}';
+        return "\nTelevision" + "\nResolucion:" + resolucion + "\nPuerto HDMI:" + puertoHDMI ;
     }
     
     
