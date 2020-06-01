@@ -10,6 +10,7 @@ import edu.ups.ecu.Modelo.Lavadora;
 import edu.ups.ecu.Modelo.Television;
 import edu.ups.ecu.Modelo.Electrodometstico;
 import java.util.List;
+import java.util.SortedSet;
 
 /**
  *
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public class ElectrodomesticoDAO implements IElectrodomesticoDAO{
 
-    private sortedSet<Electrodomestico> electrodomestico;
+    private SortedSet<Electrodometstico> electrodomestico;
             
     @Override
     public void createTelevision(Television television) {
