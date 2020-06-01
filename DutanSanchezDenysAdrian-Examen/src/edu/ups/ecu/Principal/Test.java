@@ -20,7 +20,9 @@ public class Test {
     
     public static final VistaElectrodomestico vistaElectrodomestico=new VistaElectrodomestico();
     
-    public static final ControladorElectrodomestico controladorElectrodomestico=new ControladorElectrodomestico(vistaElectrodomestico, electrodomestico, electrodomesticoDAO);
+    public static final Electrodometstico modeloElectrodomestico=new Electrodometstico();
+    
+    public static final ControladorElectrodomestico controladorElectrodomestico=new ControladorElectrodomestico(vistaElectrodomestico, modeloElectrodomestico, electrodomesticoDAO);
     
     public static void main (String[]args){
         int opcion;
@@ -62,10 +64,7 @@ public class Test {
                 case 4:
                     salir =true;
                     break;
-                    
-                          
-                    
-                    
+     
                     
                 
             }
